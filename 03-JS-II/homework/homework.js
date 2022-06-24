@@ -18,10 +18,10 @@ function mayoriaDeEdad(edad) {
   //Determinar si la persona según su edad puede ingresar a un evento.
   //Si tiene 18 años ó más, devolver --> "Allowed"
   //Si es menor, devolver --> "Not allowed"
-  if(edad < 18){
-    return "Not allowed";
-  }else{
+  if(edad >= 18){
     return "Allowed";
+  }else{
+    return "Not allowed";
   }
 }
   
@@ -162,18 +162,24 @@ function esPrimo(numero) {
   // Pista: un número primo solo es divisible por sí mismo y por 1
   // Pista 2: Puedes resolverlo usando un bucle `for`
   // Nota: Los números 0 y 1 NO son considerados números primos
- // if(numero % numero === 0 && numero % 1 === 0 || numero !== 0 || numero !== 1){
- //   return true;
- // }else{
-  //  return false;
-  //}
-  //if(numero <= 1 git)
+ if(numero <= 1){
+    return false;  
+ }else if(numero % numero === 0 && numero % 1 === 0){
+    return true;
+ }else{
+    return false;
+ }
 }
 
 function esVerdadero(valor){
   //Escribe una función que reciba un valor booleano y retorne “Soy verdadero” 
   //si su valor es true y “Soy falso” si su valor es false.
   //Escribe tu código aquí
+  if(valor === true){
+    return "Soy verdadero";
+  }else{
+    return "Soy falso";
+  }
 
 }
 
